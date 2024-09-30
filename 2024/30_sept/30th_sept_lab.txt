@@ -1,0 +1,26 @@
+#include<bits/error.h>  //if n normal directory of usr/include error.h doesn't occur.
+
+gcc -g -Wall abc.c  // Normally we run this.
+
+-I$HOME/headers  //to normally include common.h which is say inside headers local folder we can do this with gcc before abc.c
+
+-I/home/student/headers
+
+#define DEBUG
+
+#ifdef DEBUG
+////////////////  ALL THIS WILL GET EXECUTED //////////////////
+#endif
+
+#ifndef // means if not defined
+#ifdef // means if defined
+
+gcc -g -Wall -DEBUG abc.c  // we can also define by using this through cmd
+
+gcc -E abc.c // only preprocessor runs
+
+#ifndef UNIQUE_SYM // first time it will enter as symbol is not defined
+
+#define UNIQUE_SYM
+
+#endif
